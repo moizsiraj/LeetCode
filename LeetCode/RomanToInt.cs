@@ -8,6 +8,7 @@ namespace LeetCode
 {
     internal class RomanToInt
     {
+        //1 hour 45 mins
         public int RomanToIntSol(string s)
         {
             int ones = 0;

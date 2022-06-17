@@ -8,6 +8,7 @@ namespace LeetCode
 {
     internal class IsPalindrome
     {
+        //1 hour
         public bool IsPalindromeInt(int x)
         {
             Stack<int> s = new Stack<int>();

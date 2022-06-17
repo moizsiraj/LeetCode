@@ -14,7 +14,7 @@ namespace LeetCode
         {
             _Strings = strings;
         }
-
+        //57 mins
         public string Solve()
         {
             int currentCharIndex = 0;

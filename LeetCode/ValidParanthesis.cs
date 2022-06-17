@@ -14,7 +14,7 @@ namespace LeetCode
         {
             _String = @string;
         }
-
+        //20 mins
         public bool Solve()
         {
             Stack<char> stack = new();
