@@ -8,6 +8,13 @@ namespace LeetCode
 {
     internal class ValidParanthesis
     {
+        /*My Approach / Optimal Apporach*/
+        /*use a stack to keep all types of opening braces
+         * pop the stack whenever you see a closing brace
+         * if on pop the braces don't match return false
+         * return stack.empty at the end
+         */
+
         private string _String;
 
         public ValidParanthesis(string @string)

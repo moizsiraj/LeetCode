@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace LeetCode
 {
+    /* My Approach / Optimal Approach */
+    /*iterate both lists until one is empty
+     * use a current pointer to keep track of where you are in the list 
+     * during the iteration compare values and keep placing them in front of current
+     * after the loop place all the remaining node to the current
+     */
+
     public class ListNode
     {
         public int val;
