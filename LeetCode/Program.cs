@@ -7,7 +7,7 @@ public class Solution
     static void Main()
     {
         //var romanToInt = new RomanToInt();
-        var msl = new RemoveDuplicate(new int[] {1,2});
+        var msl = new IndexOf("aaaaa", "bba");
         Console.WriteLine(msl.Solve());
     }
 }
