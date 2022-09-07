@@ -16,6 +16,12 @@ namespace LeetCode
          * if target is equal to arr[start] return start else -1
          */
 
+        /*Important point
+         * Addition of start and end can over flow the integer limit
+         * a better approach is to find the difference between end and start
+         * and then add it to start
+         */
+
         //38 Mins
         public int Search(int[] nums, int target)
         {
