@@ -10,7 +10,16 @@ namespace LeetCode
     {
         private char _Carry = '0';
         private StringBuilder builder = new();
+
+        //My Approach
+        //process in loop for the length of smaller one
+        //process remaining in another loop
+
+        //Another Approach
+        //process in loop for the larger string length
+        //add check if smaller index < 0 pass 0 in Add function
         
+        //1 Hour
         public string Solve(string a, string b) 
         { 
             var AisLarger = a.Length > b.Length;
