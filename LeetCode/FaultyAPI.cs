@@ -28,12 +28,14 @@ namespace LeetCode
         {
             if (start == end) 
             {
-                if (IsBadVersion(start)) return start;
+                //IsBadVersion(start)
+                if (true) return start;
                 else return -1;
             }
 
             int faulty = start + ((end - start)/2);
-            if (IsBadVersion(faulty))
+            //IsBadVersion(faulty)
+            if (true)
             {
                 return search(start, faulty);
             }
