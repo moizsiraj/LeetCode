@@ -6,8 +6,7 @@ public class Solution
 {
     static void Main()
     {
-        //var romanToInt = new RomanToInt();
-        var msl = new IndexOf("aaaaa", "bba");
-        Console.WriteLine(msl.Solve());
+        var sol = new SquareOfSortedArray().SortedSquares(new[] {-4,-4,-3 });
+        Console.WriteLine(sol);
     }
 }
