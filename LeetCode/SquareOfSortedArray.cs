@@ -8,6 +8,14 @@ namespace LeetCode
 {
     internal class SquareOfSortedArray
     {
+        /* My Approach
+         * Square the array
+         * find the middle point of the squared array
+         * keep a left and right pointer of the middle
+         * compare and start placing values in the result array
+         */
+
+        //1 hour
         public int[] SortedSquares(int[] nums)
         {
             int[] result = new int[nums.Length];
