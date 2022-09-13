@@ -7,7 +7,6 @@ public class Solution
     static void Main()
     {
         //var romanToInt = new RomanToInt();
-        var msl = new IndexOf("aaaaa", "bba");
-        Console.WriteLine(msl.Solve());
+        new RotateArray().Rotate(new int[] { 1, 2 }, 3); 
     }
 }
