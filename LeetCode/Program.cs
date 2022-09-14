@@ -6,7 +6,7 @@ public class Solution
 {
     static void Main()
     {
-        var sol = new SquareOfSortedArray().SortedSquares(new[] {-4,-4,-3 });
-        Console.WriteLine(sol);
+        new MoveZeros().MoveZeroes(new[] {4, 2, 4, 0, 0, 3, 0, 5, 1, 0 });
+        //Console.WriteLine(sol);
     }
 }
