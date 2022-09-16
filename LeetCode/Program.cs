@@ -6,7 +6,7 @@ public class Solution
 {
     static void Main()
     {
-        new MoveZeros().MoveZeroes(new[] {4, 2, 4, 0, 0, 3, 0, 5, 1, 0 });
-        //Console.WriteLine(sol);
+        var sol = new TwoSumTwoArraySorted().TwoSum(new int[] { 2, 7, 11, 15 }, 9);
+        Console.WriteLine(sol);
     }
 }
