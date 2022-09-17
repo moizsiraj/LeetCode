@@ -6,7 +6,7 @@ public class Solution
 {
     static void Main()
     {
-         var sol = new ReverseWord().ReverseWords("let's take leetcode test");
+        var sol = new RemoveNthLastNode().RemoveNthFromEnd(new ListNode() { val = 1 }, 1);
         Console.WriteLine(sol);
     }
 }

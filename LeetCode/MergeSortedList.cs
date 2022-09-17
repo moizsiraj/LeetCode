@@ -13,17 +13,6 @@ namespace LeetCode
      * after the loop place all the remaining node to the current
      */
 
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     internal class MergeSortedList
     {
         private ListNode list1;

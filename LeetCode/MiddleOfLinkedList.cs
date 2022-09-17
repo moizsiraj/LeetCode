@@ -14,17 +14,6 @@ namespace LeetCode
          * untill end is null or end.next is null
          */
 
-        public class ListNode
-        {
-            public int val;
-            public ListNode next;
-            public ListNode(int val = 0, ListNode next = null)
-            {
-                this.val = val;
-                this.next = next;
-            }
-        }
-
         //11 Mins
         public ListNode MiddleNode(ListNode head)
         {
