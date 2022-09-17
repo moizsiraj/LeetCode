@@ -6,7 +6,7 @@ public class Solution
 {
     static void Main()
     {
-         new ReverseAString().ReverseString(new char[] { 'h', 'e', 'l', 'l', '0' });
-        //Console.WriteLine(sol);
+         var sol = new ReverseWord().ReverseWords("let's take leetcode test");
+        Console.WriteLine(sol);
     }
 }
