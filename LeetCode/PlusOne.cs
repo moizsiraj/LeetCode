@@ -8,14 +8,22 @@ namespace LeetCode
 {
     internal class PlusOne
     {
+        /* My Approach
+         * For 0 to 8 just add 1 to last index
+         * if last index is 9 run a while loop in revese
+         * and until the value at index is 9 keep placing 0
+         * when the loop ends, if value of index is -1 return new
+         * array with 1 at the start index, else add one to start index
+         */
+
         private int[] digits;
 
-        //not complete
         public PlusOne(int[] digits)
         {
             this.digits = digits;
         }
 
+        //27 Mins
         public int[] Solve()
         {
             double number = 0;
@@ -26,31 +34,25 @@ namespace LeetCode
             }
             else
             {
-                for (int i = 0, j = digits.Length - 1; i < digits.Length; i++, j--)
+                int[] array = null;
+                var index = digits.Length - 1;
+                while (index >= 0 && digits[index] == 9) 
                 {
-                    number += digits[j] * Math.Pow(10, i);
+                    digits[index] = 0;
+                    index--;
                 }
-                number++;
+                if (index == -1)
+                {
+                    array = new int[digits.Length + 1];
+                    Array.Copy(digits, 0, array, 1, digits.Length);
+                    array[0] = 1;
+                }
+                else 
+                {
+                    digits[index]++;
+                }
+                return array is not null ? array : digits;
             }
-
-            int length = 0;
-            double temp = number;
-            
-            while (temp >= 10)
-            { 
-                temp /= 10;
-                length++;
-            }
-            length++;
-            
-            var array = new int[length];
-            for (int i = array.Length - 1; i >= 0; i--)
-            {
-                double mod = number % 10;
-                array[i] = (int)mod;
-                number /= 10;
-            }
-            return array;
         }
     }
 }

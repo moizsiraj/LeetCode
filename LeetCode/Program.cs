@@ -6,7 +6,7 @@ public class Solution
 {
     static void Main()
     {
-        var sol = new RemoveValue(3, new int[] { 3,3 }).Solve();
+        var sol = new PlusOne( new int[] { 8,9,9,9 }).Solve();
         Console.WriteLine(sol);
     }
 }
