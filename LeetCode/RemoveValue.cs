@@ -8,6 +8,13 @@ namespace LeetCode
 {
     internal class RemoveValue
     {
+        /* Approach
+         * Instead of removing val and placing it at the end
+         * loop through the array and place all the valid nums
+         * at the start of the array. keep a pointer for the valid
+         * entries till where we place the valid values while looping
+         */
+
         private int val;
         private int[] nums;
 
@@ -17,31 +24,23 @@ namespace LeetCode
             this.nums = nums;
         }
 
+        //10 Mins
         public int Solve()
         {
-            if ((nums.Length == 0) || nums.Length == 1 && nums[0] == val) return 0;
-            if(nums.Length == 1 && nums[0] != val) return 1;
+            if (nums.Length == 0) return 0;
 
-            int current = 0;
-            int next = 1;
+            var valid_entries = 0;
 
-            while (next < nums.Length) 
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[current] == val) 
+                if (nums[i] != val) 
                 {
-                    while (nums[next] == val) 
-                    {
-                        next++;
-                        if (next >= nums.Length)
-                            return current;
-                    }
-                    nums[current] = nums[next];
+                    nums[valid_entries] = nums[i];
+                    valid_entries++;
                 }
-                current++;
-                next++;
-
             }
-            return current;
+
+            return valid_entries;
         }
     }
 }
