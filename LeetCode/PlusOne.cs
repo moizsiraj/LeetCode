@@ -26,7 +26,6 @@ namespace LeetCode
         //27 Mins
         public int[] Solve()
         {
-            double number = 0;
             if (digits[^1] < 9)
             {
                 digits[^1]++;
