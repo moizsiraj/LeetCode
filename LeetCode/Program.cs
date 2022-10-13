@@ -6,7 +6,7 @@ public class Solution
 {
     static void Main()
     {
-        var sol = new LongestNonRepeatingSubstring().LengthOfLongestSubstring("abcabcbb");
+        var sol = new PermutationInString().CheckInclusion("ab", "eidboaoo");
         Console.WriteLine(sol);
     }
 }
