@@ -44,5 +44,29 @@ namespace LeetCode
             }
             return true;
         }
+
+        public bool IsPalindromeString(string s, int left, int right)
+        {
+            if (left >= right && s.ElementAt(left) == s.ElementAt(right))
+                return true;
+            else
+            {
+                if (s.ElementAt(left) == s.ElementAt(right))
+                    return true && IsPalindromeString(s, left + 1, right - 1);
+                else return false;
+            }
+        }
+
+        public bool IsPalindromeStringSimpler(string s, int left, int right)
+        {
+            if (left == s.Length / 2)
+                return true;
+            else
+            {
+                if (s.ElementAt(left) != s.ElementAt(right))
+                    return false;
+                else return IsPalindromeString(s, left + 1, right - 1);
+            }
+        }
     }
 }
