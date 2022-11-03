@@ -8,6 +8,8 @@ namespace LeetCode
 {
     internal class SubsequenceSum
     {
+        //Subsequence is when we find all possible combinations in an array in order
+
         public void PrintAllSubsequencesWithSumK(int[] array, int k, bool optimal)
         {
             if (optimal)
@@ -42,6 +44,8 @@ namespace LeetCode
 
         private void PrintSequenceOptimal(int[] array, List<int> seq, int sum, int index, int k)
         {
+            //assume we have an array [1,2,3]
+            //starting with 0th index
             if (index >= array.Length)
             {
                 if (sum == k)
@@ -52,14 +56,20 @@ namespace LeetCode
                 return;
             }
 
+            //Adds 1 to seq
             seq.Add(array[index]);
             sum += array[index];
+            //All the subsequent calls from this line will have 1, for example [1], [1,2], [1,2,3], [1,3]
             PrintSequenceOptimal(array, seq, sum, index + 1, k);
+            //We remove the one here
             seq.Remove(array[index]);
             sum -= array[index];
+            //All the subsequent calls from this line will not have 1, for example [2], [2,3], [3]
             PrintSequenceOptimal(array, seq, sum, index + 1, k);
         }
 
+        //Similar logic as above but we only want to get One Sequence so we return a bool on each call
+        //letting us know if we have already got a sequence or not
         private bool PrintSequenceOptimalPrintOne(int[] array, List<int> seq, int sum, int index, int k, bool printed)
         {
             if (printed) return true;
@@ -105,6 +115,7 @@ namespace LeetCode
             return false;
         }
 
+        //similar logic but no need to keep strack of the sequence only number of sequences is needed
         private int PrintNumerSequence(int[] array, int sum, int index, int k)
         {
             if (index >= array.Length)

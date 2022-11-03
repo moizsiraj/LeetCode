@@ -47,10 +47,12 @@ namespace LeetCode
 
         public bool IsPalindromeString(string s, int left, int right)
         {
+            //return true on base condition
             if (left >= right && s.ElementAt(left) == s.ElementAt(right))
                 return true;
             else
             {
+                //check logic and if true return true and next call else return false
                 if (s.ElementAt(left) == s.ElementAt(right))
                     return true && IsPalindromeString(s, left + 1, right - 1);
                 else return false;
