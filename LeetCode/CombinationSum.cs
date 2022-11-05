@@ -19,10 +19,13 @@ namespace LeetCode
         {
             //input [1,2,3], 3
 
-            if (index >= candidates.Length)
+            //if index is more then index return
+            if (index == candidates.Length) return;
+
+            //if sum == target add list and return;
+            if (sum == target) 
             {
-                if (sum == target)
-                    listOfList.Add(new List<int>(list));
+                listOfList.Add(new List<int>(list));
                 return;
             }
             
