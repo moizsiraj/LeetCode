@@ -14,6 +14,22 @@ namespace LeetCode
             return fib(n - 1) + fib(n - 2);
         }
 
+        public int GetNthFib(int n)
+        {
+
+            if (n <= 1) return n;
+
+            var array = new int[n];
+            array[0] = 0;
+            array[1] = 1;
+            for (int i = 2; i < n; i++)
+            {
+                array[i] = array[i - 1] + array[i - 2];
+            }
+
+            return array[n - 1];
+        }
+
         public int Tribonacci(int n)
         {
             if (n == 0) return 0;
