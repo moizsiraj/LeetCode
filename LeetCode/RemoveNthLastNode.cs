@@ -90,5 +90,56 @@ namespace LeetCode
             left.next = left?.next?.next!;
             return dummy.next;
         }
+
+        /*Approach
+         * take 3 prointers all pointing to head
+         * update the end pointer kuch that its distance from
+         * head is k. Keep moving end and current until end traverses
+         * the while list. While doing so maintain a prev pointer for
+         * current pointer. if current is not head set the next of prev
+         * node to the next of current node. if its head, update current values
+         * with current.next and dereference current.next
+         */
+
+        public static void RemoveKthNodeFromEnd(LinkedList head, int k)
+        {
+            var prev = head;
+            var current = head;
+            var end = head;
+
+            for (int i = 0; i < k; i++)
+            {
+                end = end?.Next;
+            }
+
+            while (end != null)
+            {
+                prev = current;
+                current = current.Next;
+                end = end.Next;
+            }
+
+            if (current != null && current != head)
+            {
+                prev.Next = current.Next;
+            }
+            else if (current != null && current == head)
+            {
+                current.Value = current.Next.Value;
+                current.Next = current.Next.Next;
+            }
+
+        }
+
+        public class LinkedList
+        {
+            public int Value;
+            public LinkedList Next = null;
+
+            public LinkedList(int value)
+            {
+                this.Value = value;
+            }
+        }
     }
 }
