@@ -42,5 +42,34 @@ namespace LeetCode
 
             return head;
         }
+
+        /*No Stack Approach
+         * use three pointers and re arrange the next
+         * pointers of the nodes. Start prev at null, current
+         * at head and next at head.next. Move until next is null
+         * set current.next to prev at the end
+         */
+
+        public ListNode ReverseListPointer(ListNode head)
+        {
+            if (head == null) return null;
+            if (head.next == null) return head;
+
+            ListNode prev = null;
+            var current = head;
+            var next = head.next;
+
+            while (next != null) 
+            {
+                current.next = prev;
+                prev = current;
+                current = next;
+                next = current.next;
+            }
+
+            current.next = prev;
+
+            return current;
+        }
     }
 }
