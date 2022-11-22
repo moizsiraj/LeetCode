@@ -1,7 +1,8 @@
-﻿
-using LeetCode;
-
-using static LeetCode.AddTwoNumbers;
+﻿using LeetCode;
+using System.Collections;
+using System.Collections.Generic;
+using static LeetCode.MergeBinaryTrees;
+using static LeetCode.PopulateNextRightPointer;
 
 public class Solution
 {
@@ -18,27 +19,15 @@ public class Solution
         //a[7] = new int[] { 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0 };
         //var sol = new MaxAreaOfIsland().maxAreaOfIsland(a);
         //Console.WriteLine(sol);
-        //var n3 = new LinkedList(2);
-        //var n2 = new LinkedList(4);
-        //var n1 = new LinkedList(3); 
 
-        //n3.next = n2;
-        //n2.next = n1;
-
-        //var n7 = new LinkedList(5);
-        //var n8 = new LinkedList(6);
-        //var n9 = new LinkedList(4);
-
-        //n7.next = n8;
-        //n8.next = n9;
-        //var array = new int[]{ 10, 1, 2, 7, 6, 1, 5 };
-        //new CombineSumTwo().CombinationSum2(array, 8);
-
-        //var array = new int[]{1, 1, 1, 2, 3};
-        Console.WriteLine(TwoSum.TwoNumberSum(new int[] { 3,5,-4,8,11,1,-1,6}, 10));
-
-        //new LongestNonRepeatingSubstring().LengthOfLongestSubstringRecursion("abcabcbb", new HashSet<char>(), 0, 0);
-
-        //var sol = Console.WriteLine(sol);
+        var n1 = new Node(1);
+        n1.left = new Node(2);
+        n1.right = new Node(3);
+        n1.left.left = new Node(4);
+        n1.left.right = new Node(5);
+        n1.right.left = new Node(6);
+        n1.right.right = new Node(7);
+        var sol = new PopulateNextRightPointer().Connect(n1);
+        Console.WriteLine(sol);
     }
 }
