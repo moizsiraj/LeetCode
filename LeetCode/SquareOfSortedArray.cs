@@ -76,5 +76,54 @@ namespace LeetCode
                 nums[i] = nums[i] * nums[i];
             }
         }
+
+
+        public int[] SortedSquaredArray(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = array[i] * array[i];
+            }
+
+            var minIndex = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] < array[minIndex])
+                    minIndex = i;
+            }
+
+            var result = new int[array.Length];
+            var left = minIndex - 1;
+            var right = minIndex + 1;
+            result[0] = array[minIndex];
+            var counter = 1;
+            
+            while (left >= 0 && right < array.Length) 
+            {
+                result[counter] = array[left] <= array[right] ? array[left] : array[right];
+                if (array[left] <= array[right])
+                    left--;
+                else
+                    right++;
+                counter++;
+            }
+
+            while (left >= 0) 
+            {
+                result[counter] = array[left];
+                left--;
+                counter++;
+            }
+
+            while (right < array.Length)
+            {
+                result[counter] = array[right];
+                right++;
+                counter++;
+            }
+
+            return result;
+        }
     }
 }
