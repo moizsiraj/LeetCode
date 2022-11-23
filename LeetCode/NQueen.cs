@@ -8,6 +8,7 @@ namespace LeetCode
 {
     internal class NQueen
     {
+        //Not Solved
         public IList<IList<string>> SolveNQueens(int n)
         {
             var listOfList = new List<IList<string>>();
